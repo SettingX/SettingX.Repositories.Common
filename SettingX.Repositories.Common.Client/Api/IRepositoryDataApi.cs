@@ -7,19 +7,19 @@ namespace SettingX.Repositories.Common.Client.Api
 {
     public interface IRepositoryDataApi
     {
-        [Get("/api/blobdata")]
+        [Get("/api/repository_data")]
         Task<HttpContent> GetDataAsync([Query] string file = null);
         
-        [Put("/api/blobdata")]
+        [Put("/api/repository_data")]
         Task UpdateAsync([Query] string json, [Query] string userName, [Query] string ipAddress, [Query] string file = null);
         
-        [Get("/api/blobdata/existing")]
+        [Get("/api/repository_data/existing")]
         Task<List<string>> GetExistingFileNamesAsync();
         
-        [Get("/api/blobdata/exists")]
+        [Get("/api/repository_data/exists")]
         Task<bool> ExistsAsync([Query] string file = null);
         
-        [Delete("/api/blobdata")]
+        [Delete("/api/repository_data")]
         Task DeleteAsync([Query] string file);
     }
 }
