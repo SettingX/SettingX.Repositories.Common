@@ -24,7 +24,7 @@ namespace SettingX.Repositories.Common.Client.Api
         Task<List<KeyValue>> GetKeyValuesAsync([Query] string keyRepoName, [Query] string filter, [Query] string search, [Query] string repositoryId = null);
         
         [Get("/api/key_value/{key}")]
-        Task<KeyValue> GetKeyValueAsync([Query] string key);
+        Task<KeyValue> GetKeyValueAsync(string key);
         
         [Get("/api/key_value")]
         Task<Dictionary<string, KeyValue>> GetKeyValuesAsync([Query(CollectionFormat.Multi)] List<string> keys);

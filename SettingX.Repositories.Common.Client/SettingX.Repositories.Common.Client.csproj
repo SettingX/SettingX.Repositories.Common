@@ -14,7 +14,7 @@
     <ItemGroup>
       <PackageReference Include="Autofac" Version="6.1.0" />
       <PackageReference Include="Refit" Version="5.2.4" />
-      <PackageReference Include="SettingX.Core" Version="0.0.1-alpha.6" />
+      <PackageReference Include="SettingX.Core" Version="0.0.1-alpha.8" />
     </ItemGroup>
 
 </Project>
