@@ -29,7 +29,7 @@ namespace SettingX.Repositories.Common.Client.Api
             [Query] string userName,
             [Query] string userIpAddress);
 
-        [Get("/api/key_values_history/{keyValueId}")]
+        [Delete("/api/key_values_history/{keyValueId}")]
         Task DeleteKeyValueHistoryAsync(
             string keyValueId,
             [Query] string description,
