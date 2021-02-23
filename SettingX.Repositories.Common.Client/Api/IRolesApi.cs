@@ -6,19 +6,19 @@ using SettingX.Core.Models;
 
 namespace SettingX.Repositories.Common.Client.Api
 {
-    public interface IRolesRepository
+    public interface IRolesApi
     {
         [Get("/api/roles/{roleId}")]
         Task<Role> GetAsync(string roleId);
+        
+        [Get("/api/roles/byName/{roleName}")]
+        Task<Role> GetByNameAsync(string roleName);
         
         [Get("/api/roles")]
         Task<List<Role>> GetAllAsync();
         
         [Get("/api/roles/byRoles")]
-        Task<List<Role>> GetAllByRolesAsync([Query(CollectionFormat.Multi)]List<string> roles);
-        
-        [Get("/api/roles/forNewRole")]
-        Task<List<Role>> GetAllForNewRoleAsync([Query] string existingRole, [Query] string name);
+        Task<List<Role>> FindAsync([Query(CollectionFormat.Multi)]List<string> roleIds);
         
         [Post("/api/roles")]
         Task SaveAsync([Body]Role entity);
