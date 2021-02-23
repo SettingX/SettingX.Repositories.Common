@@ -5,7 +5,7 @@ using SettingX.Core.Models;
 
 namespace SettingX.Repositories.Common.Client.Api
 {
-    public interface IUsersRepository
+    public interface IUsersApi
     {
         [Get("/api/users/byEmail")]
         Task<User> GetUserByUserEmailAsync([Query] string userEmail, [Query] string passwordHash);
