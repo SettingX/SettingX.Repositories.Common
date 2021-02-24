@@ -14,9 +14,9 @@ namespace SettingX.Repositories.Common.Client.Api
         Task<ServiceToken> GetAsync(string tokenKey);
         
         [Post("/api/service_tokens")]
-        Task<bool> SaveOrUpdateAsync([Body] ServiceToken token);
+        Task<bool> SaveOrUpdateAsync([Body] ServiceToken token); //todo: remove return bool
         
         [Delete("/api/service_tokens/{tokenId}")]
-        Task<bool> RemoveAsync(string tokenId);
+        Task<bool> RemoveAsync(string tokenId); //todo: remove return bool
     }
 }
