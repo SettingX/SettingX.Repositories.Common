@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>netcoreapp3.0</TargetFramework>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
         <PackageId>SettingX.Repositories.Common.Client</PackageId>
         <Version>1.0.0</Version>
         <LangVersion>latest</LangVersion>
@@ -14,7 +14,7 @@
     <ItemGroup>
       <PackageReference Include="Autofac" Version="6.1.0" />
       <PackageReference Include="Refit" Version="5.2.4" />
-      <PackageReference Include="SettingX.Core" Version="0.0.1-alpha.17" />
+      <PackageReference Include="SettingX.Core" Version="0.0.1-alpha.18" />
     </ItemGroup>
 
 </Project>

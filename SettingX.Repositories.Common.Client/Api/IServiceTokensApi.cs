@@ -9,10 +9,7 @@ namespace SettingX.Repositories.Common.Client.Api
     {
         [Get("/api/service_tokens")]
         Task<List<ServiceToken>> GetAllAsync();
-        
-        [Get("/api/service_tokens/top")]
-        Task<ServiceToken> GetTopRecordAsync();
-        
+
         [Get("/api/service_tokens/{tokenKey}")]
         Task<ServiceToken> GetAsync(string tokenKey);
         
