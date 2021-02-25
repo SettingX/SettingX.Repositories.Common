@@ -8,7 +8,7 @@ namespace SettingX.Repositories.Common.Client.Api
     public interface IRepositoryDataApi
     {
         [Get("/api/repository_data")]
-        Task<HttpContent> GetDataAsync([Query] string file = null);
+        Task<string> GetDataAsync([Query] string file = null);
         
         [Put("/api/repository_data")]
         Task UpdateAsync([Query] string json, [Query] string userName, [Query] string ipAddress, [Query] string file = null);
