@@ -9,7 +9,7 @@ namespace SettingX.Repositories.Common.Client.Api
     public interface IConnectionUrlHistoryApi
     {
         [Get("/api/connection_url_history")]
-        Task<Tuple<List<ConnectionUrlHistoricEvent>, int>> GetPageAsync([Query] int pageNum, [Query] int pageSize);
+        Task<ConnectionUrlEventsPagedResult> GetPageAsync([Query] int pageNum, [Query] int pageSize);
         
         [Get("/api/connection_url_history/{repositoryId}")]
         Task<List<ConnectionUrlHistoricEvent>> GetByRepositoryIdAsync(string repositoryId);
