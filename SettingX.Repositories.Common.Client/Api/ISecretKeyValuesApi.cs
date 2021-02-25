@@ -30,10 +30,10 @@ namespace SettingX.Repositories.Common.Client.Api
         Task<Dictionary<string, KeyValue>> GetKeyValuesAsync([Query(CollectionFormat.Multi)] List<string> keys);
 
         [Put("/api/secret_key_value/update")]
-        Task<bool> UpdateKeyValueAsync([Query(CollectionFormat.Multi)] List<KeyValue> keyValueList);
+        Task<bool> UpdateKeyValueAsync([Body] List<KeyValue> keyValueList);
         
         [Put("/api/secret_key_value/replace")]
-        Task<bool> ReplaceKeyValueAsync([Query(CollectionFormat.Multi)] List<KeyValue> keyValueList);
+        Task<bool> ReplaceKeyValueAsync([Body] List<KeyValue> keyValueList);
         
         [Delete("/api/secret_key_value/network_overrides/{networkId}")]
         Task RemoveNetworkOverridesAsync(string networkId);
