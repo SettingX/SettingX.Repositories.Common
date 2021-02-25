@@ -17,6 +17,6 @@ namespace SettingX.Repositories.Common.Client.Api
         Task<List<RepositoryUpdateHistoricEvent>> GetByInitialCommitAsync(string initialCommit);
         
         [Delete("/api/repositories_update_history")]
-        Task RemoveRepositoryUpdateHistoryAsync([Query(CollectionFormat.Multi)] List<string> repositoryUpdateHistoryIds);
+        Task RemoveRepositoryUpdateHistoryAsync([Body] List<string> repositoryUpdateHistoryIds);
     }
 }
