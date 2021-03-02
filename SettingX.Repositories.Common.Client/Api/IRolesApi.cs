@@ -18,7 +18,10 @@ namespace SettingX.Repositories.Common.Client.Api
         Task<List<Role>> GetAllAsync();
         
         [Get("/api/roles/byRoles")]
-        Task<List<Role>> FindAsync([Query(CollectionFormat.Multi)]List<string> roleIds);
+        Task<List<Role>> FindByIdsAsync([Query(CollectionFormat.Multi)]List<string> roleIds);
+        
+        [Get("/api/roles/byNames")]
+        Task<List<Role>> FindByNamesAsync([Query(CollectionFormat.Multi)]List<string> roleNames);
         
         [Post("/api/roles")]
         Task SaveAsync([Body]Role entity);
